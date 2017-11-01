@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Music Is Fun!</title>
+    <title>Music Is Music!</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
+    <!-- Leave the form alone! -->
     <form class="form-inline" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
         <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
         <div class="form-group">
@@ -18,12 +20,29 @@
             <button type="submit" class="btn btn-primary" id="get-music-button">Get Music</button>
         </div>
     </form>
-    <div id="songs">
-
+    <div class="container">
+        <div id="songs" class="row text-center">
+            <!-- place for song output -->
+            <!-- ALL CONTENT FILLED VIA TEMPLATE -->
+            <!-- <div class="col-sm-12 col-md-6 col-lg-3 thumbnail">
+                <div class="inline-b">
+                    <img src="//placehold.it/150x150" alt="Song Image">
+                    <h3>Artist</h3>
+                    <h4>Album</h4>
+                    <h5>Song Title</h5>
+                    <h6>Price</h6>
+                    <audio controls src="sourceUrl" preload="auto"></audio>
+                </div>
+            </div> -->
+        </div>
     </div>
+    <!-- EXTERNAL LIBRARIES -->
     <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <!-- SERVICE -->
     <script src="itunes-service.js"></script>
+    <!-- CONTROLLER -->
     <script src="itunes-controller.js"></script>
+    <!-- INIT / APP -->
     <script src="app.js"></script>
 </body>
 
