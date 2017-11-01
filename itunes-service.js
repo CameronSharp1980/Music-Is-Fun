@@ -19,7 +19,8 @@ function ItunesService(){
                       artist: song.artistName,
                       collection: song.collectionName,
                       price: song.collectionPrice,
-                      preview: song.previewUrl
+                      preview: song.previewUrl,
+                      kind: song.kind
                     };
                 })
         //changes button back to GET MUSIC once songs are loaded

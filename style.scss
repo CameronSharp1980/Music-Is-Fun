@@ -1,14 +1,35 @@
-// .song-thumb{
-//     width: 120px;
-// }
-// div h5.song-collection{
-//     display: block;
-//     width: 50%;
-//     height: 50%;
-//     overflow: hidden;
-// }
+body{
+    background: url("img/guitars.jpeg");
+    background-position: center;
+    background-attachment: fixed;
 
+}
 .search-box{
     margin-top: 50px;
     margin-bottom: 50px;
+}
+.song-entry{
+    height: 425px;
+    overflow: auto;
+    background-color: rgba(225, 225, 225, .50);
+}
+.song-thumb{
+    width: 120px;
+}
+.song-title{
+    height: 2.25em;
+    overflow: auto;
+}
+.song-artist{
+    // display: block;
+    height: 3em;
+    overflow: auto;
+}
+.song-collection{
+    height: 1.25em;
+    overflow: auto;
+}
+.song-price{
+    height: 1.25em;
+    overflow: auto;
 }

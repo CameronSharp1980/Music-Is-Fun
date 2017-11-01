@@ -16,26 +16,32 @@ function ItunesController() {
       // if (song.preview.slice(-4) != ".m4a") {
       //   continue
       // }
+      if (song.kind != "song") {
+        continue
+      }
       template +=
         `
-      <div class="col-sm-12 col-md-5 col-lg-4 thumbnail">
+      <div class="col-sm-12 col-md-6 col-lg-4 thumbnail song-entry">
         <div>
             <img src="${song.albumArt}" alt="Song Image" class="song-thumb">
-            <h4>${song.artist}</h4>
-            <h6 class="song-collection">${song.collection}</h6>
-            <h4>${song.title}</h4>
-            <h5>${song.price}</h5>
-            <audio controls src="${song.preview}" preload="auto"></audio>
-
+            <h2 class="song-title">${song.title}</h2>
+            <h3 class="song-artist">${song.artist}</h3>
+            <h5 class="song-collection">Collection: ${song.collection}</h6>
+            <h5 class="song-price">Price: $${song.price}</h5>
+            <audio controls src="${song.preview}" preload="auto" class="audio-preview"></audio>
         </div>
       </div>
       `
     }
     document.getElementById("songs").innerHTML = template
   }
-
-
-
-
+  document.addEventListener('play', function (e) {
+    var previews = document.getElementsByClassName('audio-preview');
+    for (var i = 0; i < previews.length; i++) {
+      if (previews[i] != e.target) {
+        previews[i].pause();
+      }
+    }
+  }, true);
 
 }
