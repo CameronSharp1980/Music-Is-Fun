@@ -13,15 +13,18 @@ function ItunesController() {
     var template = ''
     for (var i = 0; i < songList.length; i++) {
       var song = songList[i];
+      // if (song.preview.slice(-4) != ".m4a") {
+      //   continue
+      // }
       template +=
         `
-      <div class="col-sm-12 col-md-6 col-lg-3 thumbnail">
+      <div class="col-sm-12 col-md-5 col-lg-4 thumbnail">
         <div>
-            <img src="${song.albumArt}" alt="Song Image">
+            <img src="${song.albumArt}" alt="Song Image" class="song-thumb">
             <h4>${song.artist}</h4>
-            <h5>${song.collection}</h5>
-            <h5>${song.title}</h5>
-            <h6>${song.price}</h6>
+            <h6 class="song-collection">${song.collection}</h6>
+            <h4>${song.title}</h4>
+            <h5>${song.price}</h5>
             <audio controls src="${song.preview}" preload="auto"></audio>
 
         </div>

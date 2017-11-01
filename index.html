@@ -12,14 +12,16 @@
 </head>
 
 <body>
-    <!-- Leave the form alone! -->
-    <form class="form-inline" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
-        <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
-        <div class="form-group">
-            <input type="text" class="form-control" name="artist" placeholder="Artist Name" />
-            <button type="submit" class="btn btn-primary" id="get-music-button">Get Music</button>
-        </div>
-    </form>
+    <div class="search-box text-center">
+        <!-- Leave the form alone! -->
+        <form class="form-inline" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
+            <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
+            <div class="form-group">
+                <input type="text" class="form-control" name="artist" placeholder="Artist Name" />
+                <button type="submit" class="btn btn-primary" id="get-music-button">Get Music</button>
+            </div>
+        </form>
+    </div>
     <div class="container">
         <div id="songs" class="row text-center">
             <!-- place for song output -->
